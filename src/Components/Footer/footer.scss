@@ -1,0 +1,119 @@
+// All project colors
+:root {
+  --primary-color: #3D43A5;
+  --primaryColorLight: #6e72c1;
+  --bgColor: #FFFFFF;
+  --formColor: #EAD7D3;
+  --whiteColor: #FFFFFF;
+  --blackColor: #2D2D30;
+  --greyText: #858185;
+  --inputColor: #FAF6F9;
+  --cardColor: #F1EEF2;
+
+// Font ang Typography
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.6rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.footer {
+  background: var(--primaryColorLight);
+  padding: 2rem 0;
+
+  .secContainer {
+    gap: 1.5rem;
+    text-align: center;
+    align-items: flex-start;
+
+    .logoDiv {
+      .footerLogo {
+        display: flex;
+        color: var(--blackColor);
+        font-weight: 500;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: .5rem;
+
+        .icon {
+          font-size: 25px;
+          color: var(--blackColor);
+        }
+      }
+
+      .socials {
+        gap: .5rem;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+          font-size: 25px;
+          background: var(--primary-color);
+          border-radius: 50%;
+          padding: 8px;
+          color: var(--whiteColor);
+          &:hover {
+            background: var(--primaryColorLight);
+          }
+        }
+      }
+    }
+
+    .footerLinks {
+      display: grid;
+      row-gap: .2rem;
+
+      .linksTitle {
+        padding-bottom: .5rem;
+        color: var(--blackColor);
+        font-weight: 700;
+      }
+
+      li {
+        &:hover {
+          transform: translate(10px);
+          a {
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      a, .phone, .email {
+        color: var(--blackColor);
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Media Queries
+@media screen and (min-width: 640px) {
+  .secContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .secContainer {
+    padding: 2rem 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .section {
+    padding: 4rem 0 3rem;
+  }
+
+  .container {
+    width: 75%;
+    margin: auto;
+  }
+}

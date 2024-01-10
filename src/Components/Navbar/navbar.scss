@@ -1,0 +1,146 @@
+:root {
+  --primary-color: #3D43A5;
+  --primaryColorLight: #6e72c1b5;
+  --bgColor: #FFFFFF;
+  --formColor: #EAD7D3;
+  --whiteColor: #FFFFFF;
+  --blackColor: #2D2D30;
+  --greyText: #858185;
+  --inputColor: #FAF6F9;
+  --cardColor: #F1EEF2;
+
+// Font ang Typography
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 2rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.161);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.603);
+
+  .logoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      color: black;
+      font-size: var(--h3FontSize);
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .menu {
+      position: absolute;
+      width: 70%;
+      top: -100rem;
+      right: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      background: var(--whiteColor);
+      padding: 2rem;
+      border-radius: 10px;
+      transition: .6s ease-in-out;
+      backdrop-filter: blur(5px);
+
+      li {
+        font-size: var(--h3FontSize);
+        font-weight: 500;
+        padding: 1rem 0;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+          color: var(--primary-color);
+          border-bottom: 1.5px solid var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .menuIcon, .closeIcon {
+    font-size: var(--h1FontSize);
+    &:hover {
+      color: var(--primaryColorLight);
+    }
+  }
+
+  .closeIcon {
+    position: absolute;
+    bottom: -15PX;
+    right: 50%;
+    left: 50%;
+    color: var(--blackColor);
+    transform: translate(-50%);
+  }
+
+  .showNavbar {
+    top: 8rem;
+  }
+}
+
+// Media Queries
+@media screen and (min-width: 768px) {
+  .navBar {
+    .logoDiv {
+      span {
+        font-size: var(--h2FontSize);
+      }
+    }
+
+    .closeIcon, .menuIcon {
+      display: none;
+    }
+
+    .menu {
+      ul {
+        display: flex;
+        gap: 1rem;
+
+        li {
+          font-size: var(--h3FontSize);
+          font-weight: 500;
+          padding: 1rem 0;
+          text-align: center;
+          cursor: pointer;
+
+          &:hover {
+            color: var(--primary-color);
+            border-bottom: 1.5px solid var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .navBar {
+    padding: 2rem 6rem;
+    .menu {
+      ul {
+        gap: 4rem;
+      }
+    }
+  }
+}
+
+@media scrren and (min-width: 1440px) {
+  .navBar {
+    padding: 2rem 14rem;
+  }
+}

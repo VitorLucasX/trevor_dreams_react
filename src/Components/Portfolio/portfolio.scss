@@ -1,0 +1,210 @@
+// All project colors
+:root {
+  --primary-color: #3D43A5;
+  --primaryColorLight: #6e72c1;
+  --bgColor: #FFFFFF;
+  --formColor: #EAD7D3;
+  --whiteColor: #FFFFFF;
+  --blackColor: #2D2D30;
+  --greyText: #858185;
+  --inputColor: #FAF6F9;
+  --cardColor: #F1EEF2;
+
+// Font ang Typography
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.6rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.portifolio {
+  .secContainer {
+    gap: 2rem;
+    .rightContent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 80%;
+        border-radius: 40%;
+      }
+    }
+    .leftContent {
+      img {
+        width: 70px;
+      }
+      .grid {
+        .singlePortifolio {
+          gap: 1rem;
+          align-items: flex-start;
+
+          .iconDiv {
+            img {
+              height: 50px;
+              width: 50px;
+            }
+          }
+
+          .infor {
+            h4 {
+              padding-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+@media screen and (min-width: 480px) {
+  .portifolio {
+    .secContainer {
+      grid-template-columns: repeat(1,1fr);
+      .leftContent {
+        .secHeading {
+          h3 {
+            font-size: var(--h2FontSize);
+          }
+          p {
+            font-size: var(--normalFontSize);
+            padding: .5rem 0;
+          }
+        }
+
+        .grid {
+          .singlePortifolio {
+            gap: 1.5rem;
+
+            .iconDiv {
+              img {
+                height: 60px;
+                width: 60px;
+              }
+            }
+
+            .infor {
+              h4 {
+                padding-bottom: .5rem;
+                font-size: var(--h3FontSize);
+              }
+              p {
+                font-size: var(--normalFontSize);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .portifolio {
+    .secContainer {
+      .leftContent {
+        .secHeading {
+          h3 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: var(--h3FontSize);
+          }
+        }
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          .singlePortifolio {
+            gap: 1.5rem;
+          }
+        }
+      }
+
+      .rightContent {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          margin: auto;
+          max-width: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .portifolio {
+    .secContainer {
+      grid-template-columns: repeat(2, 1fr);
+
+      .leftContent {
+        .secHeading {
+          h3 {
+            font-size: var(--h2FontSize);
+          }
+
+          p {
+            font-size: var(--h3FontSize);
+          }
+        }
+
+        .grid {
+          grid-template-columns: repeat(1,1fr);
+          .singlePortifolio {
+            gap: 1.5rem;
+          }
+        }
+      }
+
+      .rightContent {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .portifolio {
+    .secContainer {
+      gap: 3rem;
+
+      .leftContent {
+        .secHeading {
+          h3 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: var(--h3FontSize);
+          }
+        }
+
+        .grid {
+          gap: 2.5rem;
+          margin-top: 3rem;
+          .singlePortifolio {
+            gap: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .section {
+    padding: 4rem 0 3rem;
+  }
+
+  .container {
+    width: 75%;
+    margin: auto;
+  }
+}
+
